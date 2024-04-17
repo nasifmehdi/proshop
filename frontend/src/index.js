@@ -11,26 +11,27 @@ import {
 import HomeScreen from './screens/HomeScreen';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ProductScreen from './screens/ProductScreen';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomeScreen />} />
+      <Route path='/product/:id' element={<ProductScreen />} />
     </Route>
   )
 );
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} /> 
   </React.StrictMode>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
