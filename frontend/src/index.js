@@ -13,6 +13,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductScreen from './screens/ProductScreen';
 
+import { Provider } from 'react-redux';
+import store from './store';
+
 
 
 const router = createBrowserRouter(
@@ -27,8 +30,12 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
+  
   <React.StrictMode>
+    <Provider store={store}>
     <RouterProvider router={router} /> 
+  </Provider>
+   
   </React.StrictMode>
 );
 
@@ -37,3 +44,10 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+root.render(
+  <React.StrictMode>
+    
+          <RouterProvider router={router} />
+       
+  </React.StrictMode>
+);

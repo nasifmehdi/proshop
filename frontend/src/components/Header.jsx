@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container, NavbarBrand } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 import { LinkContainer } from 'react-router-bootstrap';
