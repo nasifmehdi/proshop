@@ -12,6 +12,7 @@ import HomeScreen from './screens/HomeScreen';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductScreen from './screens/ProductScreen';
+import CartScreen from './screens/CartScreen';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/product/:id" element={<ProductScreen />} />
+      <Route path="/cart" element={<CartScreen />} />
     </Route>
   )
 );
@@ -39,4 +41,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
