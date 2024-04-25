@@ -16,6 +16,7 @@ import reportWebVitals from './reportWebVitals';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import LoginScreen from './screens/LoginScreen';
+import PaymentScreen from './screens/PaymentScreen';
 import { Provider } from 'react-redux';
 import store from './store';
 import PrivateRoute from './components/PrivateRoute';
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path="/register" element={<RegisterScreen />} />;{' '}
       <Route path="" element={<PrivateRoute />}>
         <Route path="/shipping" element={<ShippingScreen />} />
+        <Route path="/payment" element={<PaymentScreen />} />
       </Route>
     </Route>
   )
