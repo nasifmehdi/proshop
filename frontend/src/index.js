@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import ShippingScreen from './screens/ShippingScreen';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductScreen from './screens/ProductScreen';
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="/cart" element={<CartScreen />} />
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />;{' '}
+      <Route path='/shipping' element={<ShippingScreen />} />;
     </Route>
   )
 );
