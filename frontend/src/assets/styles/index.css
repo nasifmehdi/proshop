@@ -9,6 +9,10 @@ main {
 .rating svg {
   color: #f8e825;
 }
+table td,
+table th {
+  text-align: center;
+}
 
 .rating-text {
   font-size: 0.8rem;
