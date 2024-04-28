@@ -9,7 +9,7 @@ import Loader from '../components/Loader';
 import { useProfileMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import { useGetMyOrdersQuery } from '../slices/ordersApiSlice';
-import { FaTimes } from "react-icons/fa";
+import { FaTimes } from 'react-icons/fa';
 
 const ProfileScreen = () => {
   const [name, setName] = useState('');
@@ -19,6 +19,7 @@ const ProfileScreen = () => {
 
   const { userInfo } = useSelector((state) => state.auth);
   const { data: orders, isLoading, error } = useGetMyOrdersQuery();
+ 
   const dispatch = useDispatch();
   useEffect(() => {
     setName(userInfo.name);
