@@ -10,6 +10,7 @@ import {
   useDeleteProductMutation,
 } from '../../slices/productApiSlice';
 import { useParams } from 'react-router-dom'
+import Paginate from '../../components/Paginate';
 
 const ProductListScreen = () => {
   
@@ -103,7 +104,7 @@ const ProductListScreen = () => {
               ))}
             </tbody>
           </Table>
-          {/* PAGINATE PLACEHOLDER */}
+          <Paginate pages={data.pages} page={data.page} isAdmin={true} />
         </>
       )}
     </>
