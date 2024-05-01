@@ -17,13 +17,7 @@ const HomeScreen = () => {
   });
   return (
     <>
-      {!keyword ? (
-        <ProductCarousel />
-      ) : (
-        <Link to="/" className="btn btn-light">
-          Go Back
-        </Link>
-      )}
+     
 
       {isLoading ? (
         <Loader />
