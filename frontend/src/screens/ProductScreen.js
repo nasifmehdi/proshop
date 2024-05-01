@@ -11,7 +11,6 @@ import {
 } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import React from 'react';
-
 import {
   useGetProductDetailsQuery,
   useCreateReviewMutation,
@@ -23,8 +22,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { addToCart } from '../slices/cartSlice';
+import Meta from '../components/Meta';
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
@@ -69,6 +68,7 @@ const ProductScreen = () => {
   };
   return (
     <>
+      
       <Link className="btn btn-light my-3" to="/">
         Go Back
       </Link>
@@ -80,6 +80,7 @@ const ProductScreen = () => {
         </Message>
       ) : (
         <>
+        <Meta title={product.name} />
           <Row>
             <Col md={6}>
               <Image src={product.image} alt={product.name} fluid />
